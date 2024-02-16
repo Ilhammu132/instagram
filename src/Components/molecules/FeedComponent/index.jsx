@@ -1,31 +1,32 @@
-import { AiOutlineHeart } from 'react-icons/ai';
-import { FiMoreHorizontal, FiSend } from 'react-icons/fi';
-import { TbMessageCircle } from 'react-icons/tb';
-import { RxBookmark } from 'react-icons/rx';
-import { useState } from 'react';
-import { GrEmoji } from 'react-icons/gr';
+import { AiOutlineHeart } from "react-icons/ai";
+import { FiMoreHorizontal, FiSend } from "react-icons/fi";
+import { TbMessageCircle } from "react-icons/tb";
+import { RxBookmark } from "react-icons/rx";
+import { useState } from "react";
+import { GrEmoji } from "react-icons/gr";
 
 export const FeedComponent = () => {
   const [isExpand, setIsExpand] = useState(false);
+  const handleToggleExpand = () => {
+    setIsExpand(!isExpand);
+  };
   const [data, setData] = useState({
-    comment: '',
+    comment: "",
   });
   const handleChange = (e) => {
     setData({ comment: e.target.value });
-    console.log(data);
   };
   return (
     <div className="mt-5 mx-20">
       <div className="flex flex-row justify-between items-center py-3">
         <div className="flex flex-row gap-3 items-center">
           <img
-            src="https://pbs.twimg.com/profile_images/880354762973077504/lNFNzc7e_400x400.jpg"
+            src="https://images.tokopedia.net/img/cache/900/hDjmkQ/2022/12/3/20eb3ddc-be4a-4d77-adcd-9430f5f2521e.jpg"
             alt="img-ig"
             className="w-[32px] h-[32px] rounded-full object-cover"
           />
           <p className="text-sm">
-            garudarevolution.ina ·{' '}
-            <span className="text-sm text-[#A7A7A7]">16 m</span>
+            cocacola_id · <span className="text-sm text-[#A7A7A7]">16 m</span>
           </p>
         </div>
         <div>
@@ -34,7 +35,7 @@ export const FeedComponent = () => {
       </div>
       <div>
         <img
-          src="https://www.searchenginejournal.com/wp-content/uploads/2022/06/ig-content-plan-62a816d2d6610-sej.png"
+          src="https://scontent.fcgk43-1.fna.fbcdn.net/v/t39.30808-6/400976244_735882355240174_7022437570525434036_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=3635dc&_nc_ohc=9ev1y7pT4wYAX8PhPCX&_nc_ht=scontent.fcgk43-1.fna&oh=00_AfBwl7XWNofyT-6cHyRMHm0Qm5ouicNUmkqGwMdAqxJUSQ&oe=65D5C5A2"
           alt="img"
           className="w-full h-[585px] rounded object-cover"
         />
@@ -59,32 +60,25 @@ export const FeedComponent = () => {
       </div>
       <div className="text-[12px] leading-normal">
         <p className="leading-normal font-bold mb-1">21,000 likes</p>
-        <p className={`p-0 leading-normal ${isExpand ? null : 'line-clamp-3'}`}>
-          <span className="font-semibold cursor-pointer">
-            garudarevolution.ina
-          </span>{' '}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quod
-          exercitationem enim sint perferendis quasi eligendi earum maxime
-          corrupti? Suscipit quae dolorem nemo excepturi voluptas harum
-          inventore aut, sunt unde obcaecati rem. Nihil eligendi eius vero,
-          soluta voluptas maxime magnam sed.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit modi
-          reprehenderit temporibus minus obcaecati iste tempore quia nisi quam
-          voluptate dolores architecto vero unde laboriosam, accusamus eveniet
-          dolor rerum! Expedita veniam molestias obcaecati. Ipsam provident sint
-          ipsum ex minima corrupti dolor ipsa eius. Similique ipsa porro nobis
-          odit necessitatibus obcaecati.
+        <p className={`p-0 leading-normal ${isExpand ? null : "line-clamp-3"}`}>
+          <span className="font-semibold cursor-pointer">gcocacola_id</span>{" "}
+          Cuma mau ngingetin kamu! COCA-COLA punya program keren namanya Recycle
+          Me! Kamu bisa dapetin OVO GRATIS. Gimana caranya? Kumpulin minimal 8
+          botol produk COCA-COLA Klik link di bio dan pilih RecycleMe Ikuti
+          langkah untuk pengiriman botol kosongmu dengan Grab. Yuk ikutan jadi
+          bagian dari #BeraniMengubah dan #BijakKelolahSampah ♻️🌿 Jangan sampai
+          kelewatan karena ada subsidi ongkir hingga 30 ribu rupiah!
         </p>
-        <button
-          onClick={() => {
-            setIsExpand(!isExpand);
-          }}
-          className="text-[#A8A8A8] leading-normal  "
-        >
-          more
-        </button>
+        <div>
+          {!isExpand && (
+            <button
+              onClick={handleToggleExpand}
+              className="text-[#A8A8A8] leading-normal"
+            >
+              Selengkapnya
+            </button>
+          )}
+        </div>
         <a href="#" className="block my-1">
           See Translation
         </a>
@@ -101,7 +95,7 @@ export const FeedComponent = () => {
           <div className="flex gap-3 items-center">
             <button
               className={`text-blue-500 font-bold ${
-                data.comment.length > 0 ? null : 'hidden'
+                data.comment.length > 0 ? null : "hidden"
               }`}
             >
               Post

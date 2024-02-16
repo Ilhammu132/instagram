@@ -1,55 +1,61 @@
-import { SidebarItem } from '../../Components/atoms/SidebarItem';
-import { GoHome } from 'react-icons/go';
+import { SidebarItem } from "../../Components/atoms/SidebarItem";
+import { GoHome } from "react-icons/go";
 import {
   AiOutlineSearch,
   AiOutlineHeart,
   AiOutlinePlusSquare,
-} from 'react-icons/ai';
-import { MdOutlineExplore } from 'react-icons/md';
-import { HiOutlineVideoCamera } from 'react-icons/hi';
-import { BiMessageRoundedAdd } from 'react-icons/bi';
-import { CiSquareMore } from 'react-icons/ci';
-import { ProfileStory } from '../../Components/atoms/ProfileStory';
-import { DATA_USER_IG } from '../../utils/constant';
-import { FeedComponent } from '../../Components/molecules/FeedComponent';
-import { SuggestProfile } from '../../Components/molecules/SuggestProfile';
-import { SuggestFollower } from '../../Components/molecules/SuggestFollowers';
+} from "react-icons/ai";
+import { MdOutlineExplore } from "react-icons/md";
+import { HiOutlineVideoCamera } from "react-icons/hi";
+import { BiMessageRoundedAdd } from "react-icons/bi";
+import { CiSquareMore } from "react-icons/ci";
+import { CgProfile } from "react-icons/cg";
+import { ProfileStory } from "../../Components/atoms/ProfileStory";
+import { DATA_USER_IG } from "../../utils/constant";
+import { FeedComponent } from "../../Components/molecules/FeedComponent";
+import { SuggestProfile } from "../../Components/molecules/SuggestProfile";
+import { SuggestFollower } from "../../Components/molecules/SuggestFollowers";
 
 export const Home = () => {
   const dataSidebar = [
     {
       icons: <GoHome size={30} />,
-      label: 'Home',
+      label: "Beranda",
       isActive: true,
     },
     {
       icons: <AiOutlineSearch size={30} />,
-      label: 'Search',
+      label: "Cari",
       isActive: false,
     },
     {
       icons: <MdOutlineExplore size={30} />,
-      label: 'Explore',
+      label: "Jelajahi",
       isActive: false,
     },
     {
       icons: <HiOutlineVideoCamera size={30} />,
-      label: 'Reels',
+      label: "Reels",
       isActive: false,
     },
     {
       icons: <BiMessageRoundedAdd size={30} />,
-      label: 'Messages',
+      label: "Pesan",
       isActive: false,
     },
     {
       icons: <AiOutlineHeart size={30} />,
-      label: 'Notification',
+      label: "Notification",
       isActive: false,
     },
     {
       icons: <AiOutlinePlusSquare size={30} />,
-      label: 'Create',
+      label: "Create",
+      isActive: false,
+    },
+    {
+      icons: <CgProfile size={30} />,
+      label: "Profile",
       isActive: false,
     },
   ];
@@ -78,7 +84,7 @@ export const Home = () => {
               })}
             </div>
             <div className="absolute bottom-5 w-[80%]">
-              <SidebarItem icons={<CiSquareMore size={30} />} label={'More'} />
+              <SidebarItem icons={<CiSquareMore size={30} />} label={"More"} />
             </div>
           </div>
         </div>
@@ -109,17 +115,59 @@ export const Home = () => {
             </div>
             <div>
               <SuggestProfile />
-              <div className="flex flex-row justify-between items-center my-3 me-20 ">
+              <div className="flex flex-row justify-between items-center me-20 mb-4">
                 <p className="text-[#A8A8A8] text-sm font-bold">
-                  Suggested for you
+                  Disarankan untuk Anda
                 </p>
-                <p className="text-xs">See All</p>
+                <p className="text-xs font-bold">Lihat Semua</p>
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-3 mb-5">
                 <SuggestFollower />
                 <SuggestFollower />
                 <SuggestFollower />
                 <SuggestFollower />
+              </div>
+              <div className="flex text-[#605f5f] text-sm font-normal text-[11.8px] gap-1 list-disc w-80 flex-wrap mt-14">
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Tentang
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Bantuan
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Pers
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  API
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Pekerjaan
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800">
+                  Privasi
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800 block">
+                  Ketentuan
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800 block">
+                  Lokasi
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800 block">
+                  Bahasa
+                </a>
+                <span class="text-gray-300 text-xs pt-0.5">&#183;</span>
+                <a href="#" class="text-gray-600 hover:text-gray-800 block">
+                  Verifikasi Meta
+                </a>
+                <p className="pt-4">&copy; 2024 INSTAGRAM FROM META</p>
               </div>
             </div>
           </div>
